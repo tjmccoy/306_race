@@ -20,9 +20,13 @@ using namespace std;
 
 // Constructor for the high_low class
 high_low::high_low() {
-    random_device rd;       // Initialize a random device to obtain seed entropy.
-    mt19937 gen(rd());  // Create a Mersenne Twister engine with the obtained seed.
-    uniform_int_distribution<int> dis(1, 100); // Define a uniform distribution for integers between 1 and 100.
+    // Random number generation implementation was assisted by GPT-3.
+    // Initialize a random device to obtain seed entropy.
+    random_device rd;   // Learn more at https://en.cppreference.com/w/cpp/numeric/random/random_device
+    // Create a Mersenne Twister engine with the obtained seed.
+    mt19937 gen(rd());  // Learn more at https://en.cppreference.com/w/cpp/numeric/random/mersenne_twister_engine
+    // Define a uniform distribution for integers between 1 and 100.
+    uniform_int_distribution<int> dis(1, 100);  // Learn more at https://en.cppreference.com/w/cpp/numeric/random/uniform_int_distribution
 
     secretNumber = dis(gen); // Generate a new random number within the specified range and assign it to secretNumber.
     userBank = 10; // Starting bank with 10 points
@@ -35,11 +39,12 @@ high_low::high_low() {
 void high_low::play() {
     int wager;
 
+    // Introductory Text
     cout << "Welcome to the Number Guessing Game!" << endl;
     cout << "A number will be randomly generated. You will guess between numbers 1-100, and I will tell you if your "
             "guess is too high or too low.\nYou have 7 attempts to correctly guess the number. Good Luck!" << endl;
 
-    // Main game loop
+    // Game Flow Loop
     while (true) {
         int guessCount = 0; // Counter for the number of guesses in each round
 
