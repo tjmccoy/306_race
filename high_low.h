@@ -1,6 +1,9 @@
-//
-// Created by Tyler McCoy and Camden W on 2/27/24.
-//
+/*
+ *  high_low.h
+ *  CSCE 306 - Live Coding 2
+ *  See source code implementation at high_low.cpp
+ *  Authors: Tyler M. and Camden W.
+ */
 
 #ifndef INC_306_RACE_1_HIGH_LOW_H
 #define INC_306_RACE_1_HIGH_LOW_H
